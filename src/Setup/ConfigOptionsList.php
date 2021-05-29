@@ -154,10 +154,6 @@ class ConfigOptionsList implements ConfigOptionsListInterface
             !in_array($options[self::INPUT_KEY_PQ_SCHEME], ['tcp', 'udp'])) {
             $errors[] = "Invalid persisted query redis scheme";
         }
-        if (isset($options[self::INPUT_KEY_PQ_PASSWORD]) &&
-            !preg_match('/^\S+$/', $options[self::INPUT_KEY_PQ_PASSWORD])) {
-            $errors[] = "Persisted query redis password can not be empty";
-        }
         
         return $errors;
     }
