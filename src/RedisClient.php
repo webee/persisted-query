@@ -87,7 +87,8 @@ class RedisClient
             $redisConfig['port'],
             10,
             '',
-            $redisConfig['database']
+            $redisConfig['database'],
+            $redisConfig['password'] ?? ''
         );
     }
 
