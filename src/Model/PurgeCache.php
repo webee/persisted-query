@@ -94,7 +94,7 @@ class PurgeCache extends CorePurgeCache
                 throw new PurgeCacheException(sprintf('Error reaching Varnish: %s', $e->getMessage()));
             }
 
-            $this->validateResponse($server, $response);
+            // $this->validateResponse($server, $response);
         }
 
         return true;
